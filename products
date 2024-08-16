@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect with Alert</title>
+    <script>
+        window.onload = function() {
+             window.location.href = 'https://bugcrowdhurrikayn.company.site/';
+          var referer = document.referrer;
+            if (referer) {
+                var url = new URL(referer);
+
+  var link = document.createElement('a');
+            link.href = 'https://emaciaramitaro.github.io/testxss/hello%20world.jpeg'; // URL dell'immagine
+            link.download = 'hello_world.jpeg'; // Nome del file da scaricare
+            document.body.appendChild(link); // Aggiungi il link al DOM
+            link.click(); // Simula un click sul link
+            document.body.removeChild(link); // Rimuovi il link dal DOM
+
+                
+                alert('Previous domain: ' + url.hostname);
+            } else {
+                alert('No referer information available.');
+            }
+           
+        };
+    </script>
+</head>
+</html>
