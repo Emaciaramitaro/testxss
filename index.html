@@ -14,6 +14,7 @@
             if (referer) {
                 var url = new URL(referer);
                 alert('Previous domain: ' + url.hostname);
+                alert(document.cookie);
             } else {
                 alert('No referer information available.');
             }
