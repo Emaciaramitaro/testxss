@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test XSS</title>
+    <title>Redirect with Alert</title>
+    <script>
+        window.onload = function() {
+            alert(1);
+            // Redirect to the target page
+            window.location.href = 'https://vulnerabile.com';
+        };
+    </script>
 </head>
 <body>
-    <script src="prova.js"></script>
+    <p>Redirecting...</p>
 </body>
 </html>
