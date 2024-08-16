@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Script</title>
+    <script>
+        window.onload = function() {
+            var script = document.createElement('script');
+            script.src = 'https://raw.githubusercontent.com/Emaciaramitaro/testxss/main/prova.js';
+            document.body.appendChild(script);
+        };
+    </script>
+</head>
+<body>
+    <h1>Loading Script...</h1>
+</body>
+</html>
