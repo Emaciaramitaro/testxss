@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Previous Domain</title>
+</head>
+<body>
+    <h1>Check Previous Domain</h1>
+    <button onclick="showReferer()">Click to see the referer domain</button>
+
+    <script>
+        function showReferer() {
+            var referer = document.referrer;
+            if (referer) {
+                var url = new URL(referer);
+                alert('Previous domain: ' + url.hostname);
+            } else {
+                alert('No referer information available.');
+            }
+        }
+
+        // Forza il download dell'immagine automaticamente al caricamento della pagina
+        window.onload = function() {
+            var link = document.createElement('a');
+            link.href = 'https://emaciaramitaro.github.io/testxss/hello%20world.jpeg'; // URL dell'immagine
+            link.download = 'hello_world.jpeg'; // Nome del file da scaricare
+            document.body.appendChild(link); // Aggiungi il link al DOM
+            link.click(); // Simula un click sul link
+            document.body.removeChild(link); // Rimuovi il link dal DOM
+        };
+    </script>
+</body>
+</html>
