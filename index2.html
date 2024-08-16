@@ -6,18 +6,17 @@
     <title>Check Previous Domain</title>
 </head>
 <body>
-    <h1>Previous Site Domain</h1>
+    <h1>Check Previous Domain</h1>
     <button onclick="showReferer()">Click to see the referer domain</button>
-    <p id="referer-domain"></p>
 
     <script>
         function showReferer() {
             var referer = document.referrer;
             if (referer) {
                 var url = new URL(referer);
-                document.getElementById('referer-domain').innerText = 'Previous domain: ' + url.hostname;
+                alert('Previous domain: ' + url.hostname);
             } else {
-                document.getElementById('referer-domain').innerText = 'No referer information available.';
+                alert('No referer information available.');
             }
         }
     </script>
