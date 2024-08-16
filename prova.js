@@ -1,1 +1,3 @@
-<script>alert('Questo è un test di esecuzione dello script!')</script>
+<script>
+        window.onload = alert(1)
+    </script>
