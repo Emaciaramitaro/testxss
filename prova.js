@@ -1,3 +1,3 @@
-<script>
-        window.onload = alert(1)
-    </script>
+window.onload = function() {
+    alert(1);
+};
