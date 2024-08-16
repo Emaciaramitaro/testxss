@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Previous Domain</title>
+</head>
+<body>
+    <h1>Checking Previous Domain</h1>
+
+    <script>
+        window.onload = function() {
+            var referer = document.referrer;
+            if (referer) {
+                var url = new URL(referer);
+                alert('Previous domain: ' + url.hostname);
+            } else {
+                alert('No referer information available.');
+            }
+        };
+    </script>
+</body>
+</html>
