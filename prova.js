@@ -1,1 +1,1 @@
-alert('XSS Vulnerability Test');
+<script>alert('XSS Vulnerability Test')</script>
